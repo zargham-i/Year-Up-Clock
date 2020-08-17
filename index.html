@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - particles.js</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+      $("h1").on("mousemove", function (e) {
+        centerX = $(this).width() / 2;
+        var moveX = centerX - e.offsetX;
+        $(this).css({
+          transform: "perspective(500px) rotateY(" + moveX + "deg)"
+        });
+      });
+    </script>
+    ]
+    <!---->
+    <div id="particles-js">
+      <div id="box"><!--<h1>YEAR-UP CLOCK</h1>--></div>
+    </div>
+    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+
+    <!-- particles -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
