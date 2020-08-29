@@ -129,7 +129,7 @@ li a:hover {
 /*BUTTON BOX CODE*/
 #button-box {
   color: white;
-  position: absolute;
+  position: relative;
   top: 66%;
   padding: 10px;
   width: 90%;
