@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>CodePen - particles.js</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./timerstyle.css" />
   </head>
   <body>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -17,16 +17,47 @@
       });
     </script>
 
-    ]
-    <!---->
     <div id="particles-js">
-      <div id="box"><!--<h1>YEAR-UP CLOCK</h1>--></div
-        <nav style="float: right;">
-          <ul>
-              <li><a class="selected" href="#clock">Clock</a></li>
-              <li><a href="timer.html">Timer</a></li>
-          </ul>
+      <nav style="float: right;">
+        <ul>
+          <li><a href="index.html">Clock</a></li>
+          <li><a class="selected" href="#timer">Timer</a></li>
+        </ul>
       </nav>
+      <div id="button-box">
+        <div class="center">
+          <input
+            type="number"
+            id="hours"
+            name="hours"
+            min="0"
+            max="23"
+            placeholder="Hours"
+          />
+
+          <input
+            type="number"
+            id="minutes"
+            name="minutes"
+            min="0"
+            max="59"
+            placeholder="Minutes"
+          />
+
+          <input
+            type="number"
+            id="seconds"
+            name="seconds"
+            min="0"
+            max="59"
+            placeholder="Seconds"
+          />
+        </div>
+        <br />
+        <button id="startbutton">Start</button>
+        <button id="stopbutton">Reset</button>
+      </div>
+
       <img
         src="full-screen.png"
         id="fullscreenicon"
@@ -35,11 +66,11 @@
         onclick="clickImg(this)"
       />
     </div>
-    <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+    <div id="MyClockDisplay" class="clock">00:00:00</div>
     <!-- particles -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-    <script src="./script.js"></script>
+    <script src="./timerscript.js"></script>
     <script>
       function clickImg(img) {
         if (isDocumentInFullScreenMode()) {
