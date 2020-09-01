@@ -129,6 +129,7 @@ function showTime() {
 
   if (h === 0) {
     h = 12;
+    session = "AM";
   }
 
   if (h >= 12) {
