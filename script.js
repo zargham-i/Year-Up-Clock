@@ -129,11 +129,12 @@ function showTime() {
 
   if (h === 0) {
     h = 12;
-    session = "AM";
   }
 
-  if (h >= 12) {
+  if (date.getHours() >= 12) {
     session = "PM";
+  } else {
+    session = "AM";
   }
 
   if (h > 12) {
